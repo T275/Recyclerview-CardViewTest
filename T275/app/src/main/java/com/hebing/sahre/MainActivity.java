@@ -3,6 +3,7 @@ package com.hebing.sahre;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -30,12 +31,11 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter = new MainActivityAdapter(mItems, this));
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mAdapter.setOnItemClickListener(new MainActivityAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int pos) {
                 startActivity(new Intent(MainActivity.this, mItems.get(pos)));
-                mItems.remove(pos);
-                mAdapter.notifyDataSetChanged();
             }
         });
     }
