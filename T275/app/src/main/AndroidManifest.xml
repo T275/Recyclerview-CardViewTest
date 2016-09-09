@@ -86,6 +86,8 @@
             android:label="@string/title_activity_main22"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".RxJavaAndRetrofitTestActivity">
+        </activity>
     </application>
 
 </manifest>

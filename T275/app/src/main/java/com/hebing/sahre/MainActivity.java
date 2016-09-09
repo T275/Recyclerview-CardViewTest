@@ -50,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
         mItems.add(ScrollingActivity.class);
         mItems.add(SettingsActivity.class);
         mItems.add(TabledActivity.class);
+        mItems.add(RxJavaAndRetrofitTestActivity.class);
     }
 }
